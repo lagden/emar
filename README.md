@@ -1,5 +1,6 @@
 Emar Batalha Wordpress
 ======================
 
-`git clone git@github.com:lagden/emar.git --recursive`
-
+Dentro da pasta `.../wp-content/themes`
+    
+    git clone git@github.com:lagden/emar.git emarbatalha --recursive
