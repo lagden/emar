@@ -1,0 +1,16 @@
+body.grid #container { 
+	@include container;
+	//@include susy-grid-background;
+
+	#contentwrap {
+		@include span-columns(16,16);
+
+	}
+}
+
+body.grid #container > header, 
+body.grid #container > footer, 
+body.grid.one-column #posts {
+	@include span-columns(16,16);
+}
+

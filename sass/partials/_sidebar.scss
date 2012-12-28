@@ -1,0 +1,18 @@
+// ==============
+// = SIDEBAR(s) =
+// ==============
+#container aside {
+	background-color: #ccc;
+	margin-top: 1em; 
+	min-height: 500px;
+	h2 { margin-top:20px; }
+	ul {
+		margin:0;
+		padding:0;
+		list-style:none;
+		li { padding: 2px; }
+		li a { display:block; border-bottom: solid 1px #ececec; }
+		ul { }
+		ul li { }
+	}
+}

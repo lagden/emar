@@ -1,0 +1,61 @@
+// =======================
+// = HEADER & NAVIGATION =
+// =======================
+header{ 
+	min-height: 110px;
+	margin-bottom: 2px;
+	@include clearfix;
+
+	&.white {
+		background: #ffffff;
+	}
+
+	.logo {
+		@include span-columns(2, 16);
+		margin-top: $grid-padding;
+
+		h1 {
+			float: none;
+			clear: both;
+			margin: 0 auto;
+			@include sprite-replace-text-with-dimensions($site_sprites, logo_preto);
+
+			&.vermelho {
+				@include sprite-replace-text-with-dimensions($site_sprites, logo_vermelho); 
+			}
+		}
+	}
+	
+	nav {
+		@include span-columns(14 omega, 16);
+		padding-top: 80px;
+		min-height: 30px;
+
+		ul {
+			margin: 0;
+			padding: 0 20px 0 0;
+			list-style: none;
+			display: block;
+			overflow: hidden;
+			float: right;
+		
+			li {
+				display: inline-block;
+				float: left;
+				padding: 0 $grid-padding;
+				margin: 0 0;
+				font-size: 13px;
+				font-family: "HelveticaNeueLT-LightCond", "Helvetica",Verdana,Tahoma,Helvetica,Arial,sans-serif;
+
+				a { text-transform: uppercase; }
+
+				&.current-menu-item a { color:$hover-color; }
+			}
+		}
+
+		&.branco ul li{
+			a { color: white; }	
+			&.current-menu-item a { color:$hover-color; }
+		} 
+	}
+}

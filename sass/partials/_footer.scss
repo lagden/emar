@@ -1,0 +1,34 @@
+// ==========
+// = FOOTER =
+// ==========
+#container footer { 
+	@include clearfix;
+	margin-top: 2px; 
+	min-height: 100px;
+
+	&.white {
+		background: #ffffff;
+	}
+
+	div {
+		padding-top: $grid-padding;
+
+		&.direitos {
+			@include span-columns(11, 16, $grid-padding);
+		}
+
+		&.companhia {
+			@include span-columns(4 omega, 16, $grid-padding);
+			text-align: right;
+		}
+
+		p, a {
+			font-size: 11px;
+		}
+	}
+
+	&.txt-branco {
+		p, a { color: white; }
+	}
+	
+}

@@ -1,0 +1,73 @@
+html, body { min-height: 100%; }
+body { @include base-font-properties; background: #1b1c20; }
+body, select, input, textarea { color: $font-color; }
+a:hover, a:active { outline: none; }
+a,
+a:active,
+a:visited { color: $font-color; text-decoration: none; }
+a:hover { color: $hover-color; }
+a:link { -webkit-tap-highlight-color: #FF5E99; }
+a img  { border:none; }
+h1, h2, h3, h4, h5, h6 { margin-bottom:20px; }
+h1 { font-size:24px; }
+
+pre, code, kbd, samp { font-family: $fixed-font-family; }
+
+::-moz-selection { 
+  background: $quiet-color; 
+  color: $loud-color; 
+  text-shadow: none; 
+}
+::selection { 
+  background: $quiet-color; 
+  color: $loud-color;
+  text-shadow: none; 
+}
+
+.aligncenter { display: block; margin: 0 auto; }
+.alignleft { float: left; margin: 0 40px 40px 0; }
+.alignright { float: right; margin: 0 0 40px 40px; }
+figure.alignnone { margin-left: 0; margin-right: 0; }
+
+// MEDIA - Based on @stubbornella’s media object: stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code/
+/*
+<a class="media promo">
+    <img src="product.jpg" alt="" class="img">
+    <p class="body">Get Product for half price!</p>
+</a>
+*/
+.media{
+    display: block;
+    .img{
+        float: left;
+        margin-right: 20px;
+        img{
+            display: block;
+        }
+    }
+    .img-rev{
+        float: right;
+        margin-left: 20px;
+        img{
+            display: block;
+        }
+    }
+    .body{
+        overflow: hidden;
+        > :last-child{
+            margin-bottom:0;
+        }
+    }
+}
+
+#content {
+	position: relative;
+	padding: 50px;
+	@include border-box-sizing;
+	@include clearfix;
+
+	p {
+		margin-top: 20px;
+	}
+}
+

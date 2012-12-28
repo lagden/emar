@@ -1,0 +1,17 @@
+@mixin base-font-properties {
+  color: $font-color;
+  font-family: $base-font-family;
+  font-size: $base-font-size;
+  line-height: $base-line-height;
+}
+
+$default-bg-position-left: left;
+$default-bg-position-top: top;
+@mixin image-replace-with($image, $width, $height, $posx: $default-bg-position-left, $posy: $default-bg-position-top) {
+  background: transparent url($image) $posx $posy no-repeat;
+  display: block;
+  height: $height;
+  overflow: hidden;
+  text-indent: -9999px;
+  width: $width;
+}

@@ -1,0 +1,105 @@
+
+@import "compass";
+@import "compass/reset";
+
+// Base Font
+$base-font-family:  "HelveticaNeueLT-Light", Helvetica, sans-serif !default;
+$base-font-size:    62.5% !default;
+$base-line-height:  2.2em !default;
+$base-alignment:    center; 
+$base-font-size:   	14px;
+$base-line-height: 	16px;
+
+// Fixed Font
+$fixed-font-family: Monaco, 'Andale Mono', 'Lucida Console', monospace !default;
+$fixed-font-size:   62.5% !default;
+$fixed-line-height: $base-line-height !default;
+
+// Colors
+$font-color:        #000000 !default;
+$loud-color:        $font-color - #333 !default;
+$quiet-color:       $font-color + #666 !default;
+$header-color:      $font-color !default;
+$hover-color: 		#e60004 !default;
+
+// ** 16 COLUMN GRID **
+$total-columns:		16;
+$column-width: 		60px;
+$gutter-width: 		12px;
+$grid-padding: 		$gutter-width;
+$container-style: 	static;
+$container-width: 	920px;
+
+// SPRITES UTILIZADOS NO SITE
+$site_sprites: sprite-map("site/*.png");
+
+//FONTES DO SITE
+@font-face {
+	font-family: 'HelveticaNeueLT-Light';
+	src: url('fonts/helveticaneuelt-light.eot');
+	src: url('fonts/helveticaneuelt-light.eot?#iefix') format('embedded-opentype'),
+		 url('fonts/helveticaneuelt-light.woff') format('woff'),
+		 url('fonts/helveticaneuelt-light.ttf') format('truetype'),
+		 url('fonts/helveticaneuelt-light.svg#helveticaneuelt-light') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'HelveticaNeueLT-LightCond';
+	src: url('fonts/helveticaneuelt-lightcond.eot');
+	src: url('fonts/helveticaneuelt-lightcond.eot?#iefix') format('embedded-opentype'),
+		 url('fonts/helveticaneuelt-lightcond.woff') format('woff'),
+		 url('fonts/helveticaneuelt-lightcond.ttf') format('truetype'),
+		 url('fonts/helveticaneuelt-lightcond.svg#helveticaneuelt-lightcond') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'HelveticaNeueLT-Roman';
+	src: url('fonts/helveticaneuelt-roman.eot');
+	src: url('fonts/helveticaneuelt-roman.eot?#iefix') format('embedded-opentype'),
+		 url('fonts/helveticaneuelt-roman.woff') format('woff'),
+		 url('fonts/helveticaneuelt-roman.ttf') format('truetype'),
+		 url('fonts/helveticaneuelt-roman.svg#helveticaneuelt-roman') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'HelveticaNeueLT-Thin';
+	src: url('fonts/helveticaneuelt-thin.eot');
+	src: url('fonts/helveticaneuelt-thin.eot?#iefix') format('embedded-opentype'),
+		 url('fonts/helveticaneuelt-thin.woff') format('woff'),
+		 url('fonts/helveticaneuelt-thin.ttf') format('truetype'),
+		 url('fonts/helveticaneuelt-thin.svg#helveticaneuelt-thin') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+    font-family: 'helvetica_neueregular';
+    src: url('fonts/helveticaneue-ultraligcond-webfont.eot');
+    src: url('fonts/helveticaneue-ultraligcond-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/helveticaneue-ultraligcond-webfont.woff') format('woff'),
+         url('fonts/helveticaneue-ultraligcond-webfont.ttf') format('truetype'),
+         url('fonts/helveticaneue-ultraligcond-webfont.svg#helvetica_neueregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@import "susy";
+@import "modules/base";
+@import "partials/boilerplate";
+@import "partials/base";
+@import "partials/form";
+@import "partials/layout";
+@import "partials/header";
+@import "partials/footer";
+@import "partials/sidebar";
+@import "partials/posts";
+@import "partials/comments";
+@import "partials/fancybox";
+@import "partials/front";
+@import "partials/at_media";

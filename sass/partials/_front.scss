@@ -1,0 +1,833 @@
+.page-id-12 {
+    #content {
+        background: white;
+    }
+}
+
+.home {
+    background: #000000;
+
+    footer {
+        background: white;
+    }
+
+    #content {
+        @include container;
+        @include clearfix;
+        padding    : 0;
+        background : white;
+
+    }
+
+    .container_destaques {
+        @include clearfix;
+        @include span-columns(16 omega, 16);
+        height     : 450px;
+        background : white;
+
+        .destaque_principal {
+            position : relative;
+            height   : 350px;
+
+            img {
+                position : absolute;
+                top      : 0;
+                left     : 0;
+                z-index  : 1;
+            }
+
+            .texto {
+                position    : absolute;
+                width       : 400px;
+                right       : 0;
+                z-index     : 2;
+                padding-top : 100px;
+                text-align  : center;
+                font-family: "HelveticaNeueLT-LightCond";
+
+                h2 {
+                    font-size     : 30px;
+                    margin-bottom : 30px;
+                    text-transform: uppercase;
+                    font-family: "HelveticaNeueLT-Thin";
+                }
+
+                p {
+                    margin-bottom: 30px;
+                }
+
+                .maisdetalhes {
+
+                    width      : 110px;
+                    text-align : center;
+                    border     : {
+                        style : solid;
+                        color : #000000;
+                        width : 1px 0;
+                    };
+                }
+            }
+        }
+
+        .destaque_thumbs {
+            font-size: 10px;
+            overflow: hidden;
+            @include span-columns(16, 16);
+
+            ul {
+                width      : auto;
+                margin     : 0 0 0 10px;
+                padding    : 0;
+                list-style : none;
+
+                li {
+                    @include span-columns(4 omega, 12);
+                    height       : 83px;
+                    border-right : 1px solid #c2c2c2;
+                    float        : left;
+
+                    &.no-border { border:0; }
+
+                    a {
+                        display :block;
+                        width   : 100%;
+                        height  : 100%;
+
+                        img { margin:10px 20px; vertical-align: middle; }
+                    }
+
+                    
+                }
+            }
+        }
+    }
+
+    .container_extras {
+        border-top: 2px solid black;
+        background: white;
+        @include span-columns(16 omega, 16);
+
+        .video { @include span-columns(8 , 16); }
+        .blog { 
+            @include span-columns(8 omega, 16); 
+
+            padding: 5px 10px;
+
+            p {
+                font-size: 11px;
+                color: #888888;
+                margin-top: 8px !important;
+
+                &.data {
+                    color: #000000;
+                }
+            }
+        }
+    }
+}
+
+.produtos {
+    padding: 0 !important;
+    @include container;
+
+    .produto {
+        @include span-columns(16 omega, 16);
+        position   : relative;
+        border     : 1px solid #d3d3d3;
+        background : white;
+        height     : 400px;
+
+
+        .imagem {
+            position : absolute;
+            top      : 0;
+            left     : 0;
+        }
+
+        .descricao {
+            position: absolute;
+            top: 50%;
+            height: 115px;
+            margin-top: -77px;
+            right: 0; width: 300px;
+            @include box-sizing(border-box);
+            padding: 25px 0 0 20px;
+            border-left: 1px solid black;
+            h3 {
+                text-transform : uppercase;
+                font-size      : 15px;
+                font-weight    : normal;
+                line-height    : 9px;
+                margin-bottom  : 30px;
+            }
+
+            p { 
+                font-size: 12px;
+                position: absolute;
+                top: auto;
+                bottom: 0;
+            }
+        }
+
+        .shareit{
+            position: absolute; top: auto; bottom:12px; right: 0; width: 300px; font-size: 10px; color: #6a6a6a; font-family: "HelveticaNeueLT-Thin";
+            a{
+                display: block; color: #6a6a6a; padding: 3px 0; margin-left: 132px;
+                &:first-child{ margin-left: 0px; }
+            }
+            img{ vertical-align: middle; }
+        }
+    }
+
+    .relacionados {
+        @include span-columns(16 omega, 16);
+        margin-top: 56px;
+
+        div.navegacao {
+            position: relative; top: -26px; font-size: 10px; line-height: 10px;
+            .left{ float: left; margin-left: 30px; }
+            .right{ float: right }
+        }
+
+        p { padding: 20px 30px; }
+
+        ul {
+            @include container;
+            margin  : 0;
+            padding : 0;
+            border  : 1px solid #d3d3d3;
+
+            li {
+                @include span-columns(2 omega,12);
+                @include nth-omega(6n);
+                width        : 150px;
+                height       : 115px;
+                overflow     : hidden;
+                border-right : 1px dotted #d3d3d3;
+            }
+        }
+    }
+}
+
+.xx{color:123;}
+
+.lista-items {
+    @include container;
+    padding          : 0 !important;
+    background-color : transparent !important;
+
+    .grid-item {
+        @include box-sizing(border-box);
+        border: 1px solid #e1e1e1; font-family: "helvetica_neueregular"; min-height: 165px; overflow: hidden; background-repeat: no-repeat; background-color: white; background-position: center center; margin-bottom: 10px;
+
+        &:hover {
+            background-color: #1b1c20;
+        };
+
+        a {
+            display        : block;
+            width          : 100%;
+            height         : 100%;
+            padding        : 10px;
+            text-align     : left;
+            text-transform : uppercase;
+            font-size      : 18px;
+            position       : relative;
+
+            span {
+                position: absolute; text-transform: uppercase;
+                font-size: 12px; bottom: 10px; right: 10px; text-align: right;
+            }
+
+            &:hover {
+                background: #ec3e35 url('images/bg_ee.png') no-repeat top left; color: black;
+                span {
+                    display: block;
+                }
+            };
+        }
+
+        &.evento {
+            border:0; background-color: #1B1C20;
+            a span { text-align: left; font-family: "HelveticaNeueLT-Thin"; font-size: 18px; display: none; top:10px; left: 10px; bottom: auto; right: auto }
+            a span.bottom { font-family: "helvetica_neueregular"; font-size: 12px; top: auto; left:auto; bottom: 10px; right: 10px; }
+            a:hover { background: #ec3e35; color: black; }
+            a:hover span { display: block; }
+        }
+    }
+
+    &.categorias .grid-item a {
+        
+    }
+}
+
+.categorias { width: 100%; float: right; margin-right: 0; #margin-left: -12px; display: inline; padding: 0 !important; background-color: transparent !important; position: relative; }
+.categorias .combo-categorias { width: 200px; height: 20px; position: relative; z-index: 20; top: 0; }
+.categorias .combo-categorias a.atual { display: block; color: black; width: 100%; height: 100%; padding-left: 12px; background-image: url('images/site/seta_baixo.png?1352665922'); background-repeat: no-repeat; background-position: left 4px; }
+.categorias .combo-categorias a.atual:hover { color: black; }
+.categorias .combo-categorias ul { position: absolute; width: 100%; padding: 0; margin: 0; top: 19px; background: #ffffff; border: 1px solid #cccccc; display: none; }
+.categorias .combo-categorias ul li { width: 100%; height: 20px; padding: 0 12px; }
+.categorias .combo-categorias ul li a { display: block; width: 100%; height: 100%; }
+.categorias .combo-categorias ul li a:hover { color: #e60004; }
+.categorias .produtos-container { position: relative; top: 25px; z-index: 10; }
+
+
+.categorias {
+    @include span-columns(16 omega, 16);
+    padding          : 0 !important;
+    background-color : transparent !important;
+    position: relative;
+
+    .combo-categorias {
+        width: 200px;
+        height: 20px;
+        position: relative;
+        z-index: 20;
+        top: 0;
+
+        a.atual {
+            display: block; color: black; width: 100%; height: 100%; padding-left: 12px; background-image: url('images/site/seta_baixo.png?1352665922'); background-repeat: no-repeat; background-position: left 4px;
+
+            &:hover { color: $font-color; };
+        }
+
+        ul {
+            position: absolute;
+            width: 100%;
+            padding: 0;
+            margin: 0;
+            top: 19px;
+            background: #ffffff;
+            border: 1px solid #cccccc;
+            display: none;
+            
+            li {
+                width: 100%;
+                height: 20px;
+                padding: 0 12px;
+
+                a {
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+
+                    &:hover {
+                        color: $hover-color;
+                    };
+                }
+            }   
+        }
+    }
+
+    .produtos-container {
+        position: relative;
+        top: 25px;
+        z-index: 10;
+    }
+
+    ul.grid-container { *zoom: 1; width: 920px; margin-left: auto; margin-right: auto; padding-left: 12px; padding-right: 12px; margin: 0; padding: 0; }
+    ul.grid-container:after { content: ""; display: table; clear: both; }
+    ul.grid-container li { font-family: "helvetica_neueregular"; width: 449px; float: left; margin-bottom: 22px; margin-right: 22px; display: inline; height: 158px; box-sizing: border-box; border: 1px solid #d3d3d3; background-repeat: no-repeat; background-position: center center; background-color: white; }
+    ul.grid-container li:nth-child(2n) { float: right; margin-right: 0; #margin-left: -12px; display: inline; }
+    ul.grid-container li a { display: block; width: 100%; height: 100%; padding: 20px 30px; text-align: left; text-transform: uppercase; font-size: 20px; position: relative; color:#999; }
+    ul.grid-container li a span { position: absolute; bottom: 10px; left: 20px; }
+    ul.grid-container li a:hover { background: #ec3e35 url('images/bg_ee.png') no-repeat top left; color: black; text-align: right; }
+    ul.grid-container li a:hover span { right: 20px; }
+
+    // ul.grid-container {
+    //     @include container;
+    //     margin  : 0;
+    //     padding : 0;
+
+    //     li {
+    //         @include span-columns(8,16);
+    //         @include nth-omega(2n);
+    //         height        : 158px;
+    //         margin-bottom : 15px;
+    //         border        : 1px solid #d3d3d3;
+    //         background    : {
+    //             repeat    : no-repeat;
+    //             position  : center center;
+    //             color     : white;
+    //         };
+
+    //         a {
+    //             display        : block;
+    //             width          : 100%;
+    //             height         : 100%;
+    //             padding        : 20px 30px;
+    //             text-align     : left;
+    //             text-transform : uppercase;
+    //             font-size      : 20px;
+    //             position       : relative;
+
+    //             span {
+    //                 position : absolute;
+    //                 bottom   : 10px;
+    //                 left     : 20px;
+    //             }
+
+    //             &:hover {
+    //                 background : #ec3e35;
+    //                 color      : black;
+    //                 text-align : right;
+
+    //                 span {
+    //                     right: 20px;
+    //                 }
+    //             };
+    //         }
+    //     }
+    // }
+}
+
+//EMAR BATALHA
+.page-id-12 {
+    font-family: "HelveticaNeueLT-LightCond";
+    #content {
+        img.alignleft {
+            margin-right: 60px;
+        }
+
+        h1 {
+            font-size: 24px;
+            margin-bottom: 100px !important;
+        }
+
+        p {
+            margin-top: 0 !important;
+            margin-bottom: 20px !important;
+            line-height: 21px;
+            text-align: justify;
+            text-justify: newspaper
+        }
+
+    }
+    
+}
+
+//LOJAS
+.page-id-24 #content { padding: 40px 0 0 0 }
+.page-id-24 #content ul { width: 920px; margin: 0; padding: 0; font-size: 0;}
+.page-id-24 #content ul:after { content: ""; display: table; clear: both; }
+.page-id-24 #content ul li { display: inline-block; width: 50%; margin: 5px 0 0 0; font-size: 14px; }
+.page-id-24 #content ul li.media{ position: relative;}
+.page-id-24 #content ul li.media .img{ margin-right: 0 }
+.page-id-24 #content ul li.media .img-rev{ margin-left: 0 }
+.page-id-24 #content ul li.media .body{ font-family: "HelveticaNeueLT-LightCond"; position: absolute; bottom: 0; top: auto; left: 233px; right: auto; }
+.page-id-24 #content ul li h1{ font-size: 24px; font-family: "helvetica_neueregular"; line-height: 32px;}
+.page-id-24 #content ul li h2{ font-size: 18px; }
+.page-id-24 #content ul li h1,
+.page-id-24 #content ul li h2,
+.page-id-24 #content ul li p {  margin: 0; }
+.page-id-24 #content ul li h1 { font-weight: normal; margin-bottom: 50px; }
+.page-id-24 #content ul li.tr.media .body{ right: 233px; left: auto; }
+.page-id-24 #content ul li.tr h1,
+.page-id-24 #content ul li.tr h2,
+.page-id-24 #content ul li.tr p { text-align: right; }
+// .page-id-24 {
+//     #content {
+//         ul {
+//             @include container;
+//             margin  : 0;
+//             padding : 0;
+
+//             li {
+//                 @include span-columns(8 omega,16);
+//                 width  : 50%;
+//                 margin : 5px 0 0 0;
+//                 float  : left;
+
+//                 img.alignleft {
+//                     float        : left;
+//                     margin-right : 10px;
+//                 }
+
+//                 img.alignright {
+//                     float       : right;
+//                     margin-left : 10px;
+//                 }
+
+//                 h1, h2, p { 
+//                     float   : left; 
+//                     display : block;
+//                     width   : 223px;
+//                     margin  : 0;
+//                 }
+
+//                 h1 {
+//                     font-weight   : normal;
+//                     margin-bottom : 50px;
+//                 }
+
+//                 &.tr {
+//                     h1, h2, p { 
+//                         text-align: right;
+//                     }
+//                 }
+//             }
+//         }
+//     }
+// }
+
+//CONTATO
+.page-id-26 {
+    #content {
+        @include container;
+        .wpcf7 {
+            @include span-columns(8 ,16);
+            margin-top: 98px !important;
+
+            fieldset {
+                width: 100%;
+                margin: 10px 0;
+
+                label { 
+                    width: 80px;
+                    float: left;
+                    text-align: right;
+                    margin-top: 5px;
+                }
+
+                input { 
+                    width: 320px;
+                    height: 30px;
+                    line-height: 30px;
+                    float: left;
+                    margin-left: 10px;
+                    &[type=text] { border:1px solid #d5d5d5; }
+                }
+            }
+
+            p { 
+                text-align: right;  
+                padding-right: 24px;
+            }
+
+            .bt-enviar {
+                float: right;
+                margin-right: 24px;
+                background: transparent;
+                border: {
+                    style: solid;
+                    color: #fd5a51;
+                    width: 1px 0;
+                };
+            }
+        }
+
+        ul {
+            @include span-columns(8 omega, 16);
+            margin  : 0;
+            padding : 0;
+
+            li {
+                margin-bottom : 60px;
+                padding-left  : 50px;
+                background    :{
+                    repeat   : no-repeat;
+                    position : left center;
+                    image    : image-url('contato_ico.jpg');
+                };
+            }
+        }
+    }
+}
+
+.grid-item {
+    $grid_height: 165;
+
+    min-height    : 165px;
+    margin-bottom : 10px;
+    overflow      : hidden;
+    background    : {
+        repeat    : no-repeat;
+        color     : white;
+        position  : center center;
+    };
+
+    &.col1 { @include span-columns(4,16); }
+    &.col2 { @include span-columns(8,16); }
+    &.row1 { height: #{$grid_height}px; }
+    &.row2 { height: #{$grid_height * 2 + 10}px; }
+    &.omega { @include omega; }
+
+}
+
+.single {
+    #content {
+        padding    : 0;
+        background : transparent;
+    }
+}
+
+.paginacao {
+    @include span-columns(16,16);
+    text-align: right;
+
+    &.white {
+        span, a { color: #ffffff; }
+        a:hover { color: $hover-color; };
+    }
+}
+
+.bt-voltar {
+    position      : absolute;
+    top           : 30px;
+    right         : 30px;
+    padding-right : 15px;
+    z-index       : 10;
+    background    : {
+        image    : image-url('site/seta_pag_esquerda.png');
+        repeat   : no-repeat;
+        position : right center;
+    };
+
+
+    &.white {
+        top              : 0;
+        color            : #ffffff;
+        background-image : image-url('seta_pag_esquerda_cinza.png');
+
+        &:hover {
+            color: $hover-color;
+        };
+    }
+}
+
+.pikachoose {width: 520px; margin: 0 auto;}
+
+.pika-thumbs{ 
+    padding : 0 16px; 
+    height  : 75px; 
+    
+    li{ 
+        width           : 154px; 
+        height          : 112px; 
+        margin          : 0; 
+        padding         : 0; 
+        overflow        : hidden;
+        float           : left; 
+        list-style-type : none;
+        cursor          : pointer;
+
+        .clip {
+            position       : relative;
+            height         : 100%;
+            text-align     : center; 
+            vertical-align : middle; 
+            overflow       : hidden;
+        }
+    }
+}
+    
+.pika-stage, .pika-textnav {width: 920px;}
+.pika-stage {
+    position: relative; height: 375px; text-align: center; margin-bottom: 56px;
+    
+    img{
+        height:375px;
+    }
+
+    .caption {
+        display: none;
+    }
+}
+.pika-imgnav {
+    margin-top: 20px;
+
+    a {
+        position    : absolute; 
+        text-indent : -110%; 
+        display     : block;
+        z-index     : 3;
+        cursor      : pointer;
+
+        &.previous {
+            background : image-url('site/seta_esquerda_branca.png') no-repeat left 45%; 
+            height     : 375px; 
+            width      : 50px; 
+            top        : 0px; 
+            left       : 0px;
+        }
+
+        &.next {
+            background : image-url('site/seta_direita_branca.png') no-repeat right 45%; 
+            height     : 375px;  
+            width      : 50px; 
+            top        : 0px; 
+            right      : 0px;
+        }
+
+        &.play, &.pause {
+            display: none;
+        }
+    }
+}
+
+.boxinfo{
+    background-color: white;
+    width: 830px;
+    height: 500px;
+    font-family: 'HelveticaNeueLT-Light';
+    position: relative;
+    font-size: 12px;
+    .boxinfo-header{
+        border: 1px solid #fd4e45;
+        border-width: 1px 0;
+        margin-top: 30px;
+        padding: 10px 30px;
+        h1{
+            margin: 0;
+            padding: 0;
+            font-size: 23px;
+            font-family: 'HelveticaNeueLT-Light';
+            float: left;
+            vertical-align: middle;
+            line-height: 40px;
+            height: 40px;
+        }
+        div{
+            float: right;
+            vertical-align: middle;
+            line-height: 40px;
+            height: 40px;
+            a{
+                padding-right: 15px;
+                background-image: url('images/site/seta_pag_esquerda.png?1353882204');
+                background-repeat: no-repeat;
+                background-position: right center;
+            }
+        }
+    }
+    .boxinfo-content{
+        $pad: 30px;
+        @include clearfix();
+        padding: 0 $pad $pad+20 $pad;
+        position: absolute;
+        bottom: 0;
+        p{
+            margin: 0;
+            padding: 0 0 25px 0;
+        }
+
+        input[type=text],
+        select{
+            width: 180px;
+            border: 1px solid #dbdbdb;
+            padding: 3px ;
+            &:focus{
+                outline: none;
+            };
+        }
+
+        button,
+        input[type='submit']{
+            font-family: 'HelveticaNeueLT-Light';
+            position: absolute;
+            top: auto;
+            left: auto;
+            bottom: 20px;
+            right: 10px;
+        }
+
+        .boxinfo-form{
+            @include inline-block;
+            @include box-sizing(border-box);
+            width: 410px - $pad;
+            vertical-align: bottom;
+            border-right: 1px solid #dbdbdb;
+            padding-right: 25px;
+            position: relative;
+            .nav{
+                li{
+                    margin-right: 15px;
+                    &:last-child{
+                        margin-right: 0;
+                    }
+                }
+            }
+            .campo-msg{
+                font-size: 10px;
+                display: block;
+                padding-top: 5px;
+            }
+            
+        }
+        .boxinfo-produto{
+            @include inline-block;
+            @include box-sizing(border-box);
+            width: 410px - $pad;
+            vertical-align: bottom;
+            padding-left: 15px;
+            h3{
+                font-family: 'HelveticaNeueLT-Light';
+                font-size: 15px;
+                text-transform: uppercase;
+                margin: 0;
+                padding: 0 0 10px 0;
+            }
+        }
+        .boxinfo-ask{
+            font-size: 10px;
+        }
+    }
+
+}
+
+.pika-tooltip{display: none;}
+.pika-counter{display: none;}
+
+.pika-textnav {overflow: hidden; margin: 10px 0 0 0;bottom:10px; position:absolute; display: none;}
+.pika-textnav a {font-size: 12px; text-decoration: none; color: #333; padding: 4px;}
+.pika-textnav a.previous {float: left; width: auto; display: block;}
+.pika-textnav a.next {float: right; width: auto; display: block;}
+
+.pika-loader{ background:url(loading.gif) 3px 3px no-repeat #000; background-color:rgba(0,0,0,0.9); color:white; width:60px; font-size:11px; padding:5px 3px; 
+    text-align:right; position:absolute; top:15px; right:15px; }
+
+/* jCarousel Styles */
+/*if you're not using the carousel you can delete everything below this */
+.jcarousel-skin-pika .jcarousel-container-horizontal { padding: 15px 20px; overflow:hidden; margin-top: 50px;}
+.jcarousel-skin-pika .jcarousel-clip-horizontal {height: 90px; width: 485px;}
+.jcarousel-skin-pika .jcarousel-item-horizontal { margin-right: 10px;}
+
+
+
+// Customized
+$heightForm: 22px;
+$paddingForm: 3px;
+$lineHeightForm: $heightForm;
+.Styled{
+    height: #{($heightForm - $paddingForm)}px;
+    line-height: #{($lineHeightForm - $paddingForm)}px;
+    vertical-align: middle;
+}
+
+select.Styled{
+    position: relative;
+    z-index: 10;
+    cursor: pointer;
+    &.hiddenStyle{
+        @include opacity(0);
+    }
+}
+
+span.Styled{
+    padding: #{$paddingForm}px;
+    background:{
+        color: white;
+        image: url('images/site/seta_baixo.png?1353882204');
+        position: 95% center;
+        repeat: no-repeat;
+    };
+    border: 1px solid #dbdbdb !important;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 9;
+    display: block;
+    height: inherit;
+    padding: 2px 4px;
+}
+
