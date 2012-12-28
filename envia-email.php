@@ -11,9 +11,9 @@ foreach ($campos as $campo)
 if($post)
 {
     // Alterar a conta de email!!! - Webhost da erro, mas local funciona muito bem;
-    // $transport = Swift_SmtpTransport::newInstance('smtp.gmail.com', 465, 'ssl')
-    //     ->setUsername('4nothing@gmail.com')
-    //     ->setPassword('big1buttgirl2');
+    // $transport = Swift_SmtpTransport::newInstance('smtp.emarbatalha.com.br', 465, 'ssl')
+    //     ->setUsername('informacao@emarbatalha.com.br')
+    //     ->setPassword('******************');
 
     // Plano B
     $transport = Swift_MailTransport::newInstance();
